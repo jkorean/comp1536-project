@@ -4,17 +4,34 @@
     right: 0;
     left: 0;
     text-align: center;
+    background-color: #dddddd;
     
 }
 
 #navbar ul {
     list-style-type: none;
-    display: inline-block;
     
+    
+}
+
+#navbar li {
+    display: inline-block;
 }
 
 body #wrapper {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
+}
+
+.flexcontainer {
+    display: flex;
+    width: 1000px;
+    margin:  auto;
+    
+    justify-content: space-between;
+}
+.content {
+    padding:  5px;
+    
 }
