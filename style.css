@@ -1,3 +1,15 @@
+h1 {
+    margin:  auto;
+    padding-top: 10px;
+    padding-bottom:  10px;
+    padding-left:  50px;
+    color: blue;
+}
+
+.header {
+    
+}
+
 #navbar {
     position:  fixed;
     top: 0;
@@ -7,9 +19,18 @@
     
 }
 
-#navbar ul {
-    list-style-type: none;
+#navbar li {
     display: inline-block;
+    
+}
+
+
+#navbar ul {
+    margin:  auto;
+    padding-top: 30px;
+    width: auto;
+    list-style-type: none;
+        
     
 }
 
