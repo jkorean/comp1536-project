@@ -11,8 +11,14 @@ h1 {
 
 #header {
     padding-top: 50px;
-    
-    
+        
+}
+
+.headerlogo {
+    float: left;
+    padding-left: 30px;
+    padding-top: 15px;
+  
 }
 
 #navbar {
@@ -22,6 +28,7 @@ h1 {
     left: 0;
     height: 50px;
     text-align: center;
+    background-color: #0ff;
 
     
 }
@@ -35,7 +42,8 @@ h1 {
 
 #navbar ul {
     margin:  auto;
-    padding-top: 0px;
+    padding-top: 15px;
+    padding-right: 300px;
     height: 25px;
     width: auto;
     word-spacing: 50px;
@@ -50,10 +58,10 @@ body #wrapper {
     margin-right:  auto;
 }
 #content1 {
-    
+    display: flexbox;
 }
 #content2 {
-    
+    display: flexbox;
 }
 #footer{
     text-align: center;
