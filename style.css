@@ -9,7 +9,9 @@ h1 {
     color: blue;
 }
 
-.header {
+#header {
+    padding-top: 50px;
+    
     
 }
 
@@ -18,22 +20,26 @@ h1 {
     top: 0;
     right: 0;
     left: 0;
+    height: 50px;
     text-align: center;
     
 }
 
 #navbar li {
     display: inline-block;
-    
+    word-spacing: normal;
+       
 }
 
 
 #navbar ul {
     margin:  auto;
-    padding-top: 30px;
+    padding-top: 0px;
+    height: 25px;
     width: auto;
+    word-spacing: 50px;
     list-style-type: none;
-        
+            
     
 }
 
