@@ -1,32 +1,42 @@
 #navbar {
-    position:  fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    background-color: #dddddd;
-    
+  margin-left: -10px;
 }
 
 #navbar ul {
+    
     list-style-type: none;
-    
-    
+    overflow: hidden;
+    background-color: #42A5F5;
+    position: relative;
+    width: 100%;
+    text-align: center;
 }
 
 #navbar li {
-    display: inline-block;
+    
+    display: inline;
+    
 }
 
+#navbar li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #1565C0;
+
+}
 body #wrapper {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
+    padding-top: 40px;
 }
 
 .flexcontainer {
     display: flex;
-    width: 1000px;
+    
     margin:  auto;
     
     justify-content: space-between;
@@ -35,3 +45,4 @@ body #wrapper {
     padding:  5px;
     
 }
+
