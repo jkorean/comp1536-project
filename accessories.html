@@ -2,41 +2,61 @@
 
 <html lang="en">
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <meta charset="utf-8" />
-        <!--This links to the appropriate css document.-->
-        <link href="#" type="text/css" rel="stylesheet">
+        <link href="./style.css" type="text/css" rel="stylesheet">
         <title>Accessory Rentals</title>
     </head>
     <body>
-        <div>
-            <!--Contains navbar element.-->
-            <ul>
-                <li><a href="#">Placeholder</a></li>
-                <li><a href="#">Placeholder</a></li>
-                <li><a href="#">Placeholder</a></li>
-                <li><a href="#">Placeholder</a></li>
-            </ul>
-            <!--Link to login page.-->
-            <a href="#">Login</a>
-        </div>
-        <div>
-            <!--Contains Header-->
-            <!--Logo/Link to homepage.-->
-            <a href="#">
-            <img src="#" alt="AlpineKo logo" height="" width="">
+        <div id="navbar">
+            <a href="index.html">
+            <img class="navlogo" src="./images/aklogo.png" alt="Logo">
             </a>
+            <!--Contains navbar element.-->
+            <div id="innernav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="lessons.html">LESSONS</a></li>
+                <li><a href="rentals.html">RENTALS</a></li>
+                <li><a href="#">TUNE UPS</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+            </div>
+            <!--Link to login page.-->
+            <a href="login.html">Login</a>
         </div>
         <div>
-            <!--Main Content.-->
-            <h1>Accessory Rentals</h1>
-            <p>This is the page for accessory rentals. Information about renting
-                accessories goes here.</p>
-            <!--Links to rental booking page.-->
-            <a href="#">Rent now!</a>
+            <div>
+                <!--Contains Header-->
+                <!--Logo/Link to homepage.-->
+                <a href="#">
+                <img src="#" alt="AlpineKo logo" height="" width="">
+                </a>
+            </div>
         </div>
-        <div>
-            <!--Contains the footer.-->
-            <p>Footer info here.</p>
+        <div id="wrapper">
+            <div class="content1">
+                <!--Main Content.-->
+                <h1>Accessory Rentals</h1>
+                <!--Links to rental booking page.-->
+                <a href="rentalbooking.html">Rent now!</a>
+                <p>This is the page for accessory rentals. Information about renting
+                    accessories goes here.</p>
+                <!--Return link to rentals page-->
+                <p><a href="rentals.html">Back to Rentals page.</a></p>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="innerfooter">
+            <ul class="footercontact">
+            <li>Phone: 604.555.3434</li>
+            <li>Email: <a href="mailto:mail@alpineko.com">mail@alpineko.com</a></li>
+            <li>Facsimile: 250.322.3323</li>
+            </ul>
+            <p>Copyright Lucas Chan - Delan Eliot - Derek Hirotsu - Jim Ko - Daniel Park</p>
+            <p>All rights reserved</p>
+            <h3 class="footercontactheader"><a href="./contact.html">Contact Us</a></h3>
+            </div>
         </div>
     </body>
 </html>
