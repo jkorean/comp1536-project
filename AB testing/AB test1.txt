@@ -1,0 +1,4 @@
+AB test 1:
+
+Testing "more info" buttons vs img headers being clickable.
+	-UX/UI testing
