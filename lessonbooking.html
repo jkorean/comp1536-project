@@ -1,13 +1,111 @@
-<!DOCTYPE html>
-
 <html lang="en">
     <head>
-        <!--This links to the appropriate css document.-->
-        <link href="#" type="text/css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <meta charset="utf-8" />
-        <title></title>
+        <link href="./style.css" type="text/css" rel="stylesheet">
+        <title>AlpineKo Ski and Board</title>
     </head>
     <body>
-        
+        <div id="navbar">
+
+            <img class="navlogo" src="./images/aklogo.png">
+            <div id="innernav">
+            <ul>
+            <li><a href="lessons.html">LESSONS</a></li>
+            <li><a href="#">RENTALS</a></li>
+            <li><a href="#">TUNE UPS</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="header">
+            <h1><a><img src="" alt="Company Logo"></a>Lesson Booking</h1>
+        </div>
+        <div id="wrapper">
+            <div id="bookingcontent1">
+                <h2>Customer Information</h2>
+                <form>
+                <label for="Lesson Type">Lesson Type:</label>
+                <select size="1" name="Lesson Type">
+                    <option>Select lesson type</option>
+                    <option value="Ski">Ski</option>
+                    <option value="Snowboard">Snowboard</option>
+                </select>  
+                <label for="Skill Level">Skill Level:</label>
+                <select size="1" name="Skill Level" required="required">
+                    <option>Select skill level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Novice">Novice</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <label for="date">Book a Date:</label>
+                <input type="date" name="Date" required="required">
+                <label for="name">Name:</label>
+                <input type="text" name="Name" required="required">
+                <label for="Date of birth">Date of birth (mm-dd-yyyy):</label>
+                <input type="numeric" maxlength="10" size="10" name="Date of Birth" required="required">
+                <label for="Age">Age:</label>
+                <input type="numeric" maxlength="3" size="3" name="Age">
+                <label for="email">E-mail:</label>
+                <input type="email" name="Email">
+                <label for="Phone Number">Phone Number:</label>
+                <input type="tel" name="Phone Number" required="required">
+                <label for="payment type">Payment Type:</label>
+                <select size="1" name="Payment Type" required="required">
+                    <option>Select payment type</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="American Express">American Express</option>
+                </select>
+                <input type="submit" id="submit">
+                <input type="reset" id="reset">
+            </form>
+            </div>
+            <div id="bookingcontent2">
+            <h2>Prices</h2>
+            <table>
+                <tr>
+                    <th>Lessons/day</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Ski/Snowboard</td>
+                    <!--enter price-->
+                    <td>$ 1,000,000.00</td>
+                </tr>
+            </table>
+            <h2>Skill Levels</h2>
+            <table id="table2">
+                <tr>
+                    <td>Beginner</td>
+                    <td>No experience</td>
+                </tr>
+                <tr>
+                    <td>Novice</td>
+                    <td>Few days of experience</td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Able to ski/ride comfortably</td>
+                </tr>
+                <tr>
+                    <td>Advanced</td>
+                    <td>Able to ski/ride comfortably in black diamond terrain</td>
+            </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="innerfooter">
+            <ul class="footercontact">
+            <li>Phone: 604.555.3434</li>
+            <li>Email: <a href="mailto:mail@alpineko.com">mail@alpineko.com</a></li>
+            <li>Facsimile: 250.322.3323</li>
+            </ul>
+            <p>Copyright Lucas Chan - Delan Eliot - Derek Hirotsu - Jim Ko - Daniel Park</p>
+            <p>All rights reserved</p>
+            <h3 class="footercontactheader"><a href="./contact.html">Contact Us</a></h3>
+            </div>
+        </div>
     </body>
 </html>
