@@ -153,6 +153,94 @@ p {
     flex: 1 100%;
     background:rgba(255,255,255,0.7);
 }
+
+#bookingcontent1 {
+    display: flexbox;
+    padding: 20px 10px 20px 40px;
+    flex: 6;
+    background: rgba(255,255,255,0.7);
+}
+
+#bookingcontent2 {
+    display: flexbox;
+    padding: 20px 20px 20px 10px;
+    flex: 4;
+    background: rgba(255,255,255,0.7);
+}
+
+form {
+    background-color: #eaeaea;
+    padding: 30px 30px 30px 50px;
+}
+
+form select {
+    margin-top: 10px;
+    display: block;
+}
+
+label {
+    float: left;
+    width: 210px;
+    clear: left;
+    text-align: left;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+input, textarea { 
+    margin-top: 10px;
+    display: block;
+}
+
+#submit {
+    margin-left: 260px;
+}
+
+#reset {
+    margin-left: 355px;
+    margin-top: -21px;
+}
+
+table {
+    background: white;
+    border-collapse: collapse;
+    height: 100px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#table2 {
+    background: white;
+    border-collapse: collapse;
+    height: 210px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+tr {
+    border: 2px solid #9ea7af;
+    color: #666B85;
+    font-size: 16px;
+    text-align: center;
+}
+
+th {
+    color: #D5DDE5;;
+    background: rgb(77,133,192);
+    border: 2px solid #9ea7af;
+    font-weight: 100;
+    padding: 0;
+}
+
+td {
+    border: 2px solid #9ea7af;
+    padding: 0;
+}
+
 #footer{
     text-align: center;
     margin: 0;
