@@ -1,0 +1,18 @@
+DIV IDs:
+navbar
+banner
+wrapper
+content1
+content2
+content3
+footer
+
+classes:
+innerbanner
+innercontent
+contentimg
+moreinfo
+myButton
+innerfooter
+footercontact
+footercontactheader
