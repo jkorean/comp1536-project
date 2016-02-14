@@ -126,17 +126,20 @@ p {
 
 #aboutus {
     width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
-#aboutusheader {
+.aboutusheader {
     
 }
 
-#aboutuscontent {
-    
+.aboutuscontent {
+    width: 700px;
+    padding-top: 15px;
+    margin: auto;
 }
+
+
 #content1 {
     display: flex;
     padding-right: 10px;
