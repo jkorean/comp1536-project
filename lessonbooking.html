@@ -35,7 +35,7 @@
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form>
+                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
                 <label for="LessonType">Lesson Type:</label>
                 <select size="1" name="Lesson Type" id="LessonType">
                     <option>Select lesson type</option>
@@ -55,9 +55,9 @@
                 <label for="name">Name:</label>
                 <input type="text" name="Name" id="name" required="required">
                 <label for="Dateofbirth">Date of birth (mm-dd-yyyy):</label>
-                <input type="number" size="10" name="Date of Birth" id="Dateofbirth" required="required">
+                <input type="text" size="10" name="Date of Birth" id="Dateofbirth" required="required">
                 <label for="Age">Age:</label>
-                <input type="number" size="3" id="Age" name="Age">
+                <input type="text" size="3" id="Age" name="Age">
                 <label for="email">E-mail:</label>
                 <input type="email" name="Email" id="email">
                 <label for="PhoneNumber">Phone Number:</label>

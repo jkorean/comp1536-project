@@ -35,7 +35,7 @@
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form>
+                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
                 <label for="RentalType">Rental Type:</label>
                 <select size="1" name="Rental Type" id="RentalType">
                     <option>Select rental type</option>
@@ -49,7 +49,7 @@
                     <option value="Used">Used</option>
                 </select>
                 <label for="Ski/BoardLength">Ski/Board Length (cm):</label>
-                <input type="number" size="3" name="Ski/Board Length" id="Ski/BoardLength">
+                <input type="text" size="6" name="Ski/Board Length" id="Ski/BoardLength">
                 <label for="Accessories">Accessories:</label>
                 <input type="text" name="Accessories" id="Accessories">
                 <label for="date">Book a Date:</label>
@@ -57,9 +57,9 @@
                 <label for="name">Name:</label>
                 <input type="text" name="Name" id="name" required="required">
                 <label for="Dateofbirth">Date of birth (mm-dd-yyyy):</label>
-                <input type="number" size="10" name="Date of Birth" id="Dateofbirth" required="required">
+                <input type="text" size="10" name="Date of Birth" id="Dateofbirth" required="required">
                 <label for="Age">Age:</label>
-                <input type="number" size="3" id="Age" name="Age">
+                <input type="text" size="3" id="Age" name="Age">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="Email">
                 <label for="PhoneNumber">Phone Number:</label>
