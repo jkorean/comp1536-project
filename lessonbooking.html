@@ -36,14 +36,14 @@
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
                 <form>
-                <label for="Lesson Type">Lesson Type:</label>
-                <select size="1" name="Lesson Type">
+                <label for="LessonType">Lesson Type:</label>
+                <select size="1" name="Lesson Type" id="LessonType">
                     <option>Select lesson type</option>
                     <option value="Ski">Ski</option>
                     <option value="Snowboard">Snowboard</option>
                 </select>  
-                <label for="Skill Level">Skill Level:</label>
-                <select size="1" name="Skill Level" required="required">
+                <label for="SkillLevel">Skill Level:</label>
+                <select size="1" name="Skill Level" id="SkillLevel">
                     <option>Select skill level</option>
                     <option value="Beginner">Beginner</option>
                     <option value="Novice">Novice</option>
@@ -51,19 +51,19 @@
                     <option value="Advanced">Advanced</option>
                 </select>
                 <label for="date">Book a Date:</label>
-                <input type="date" name="Date" required="required">
+                <input type="date" name="Date" id="date" required="required">
                 <label for="name">Name:</label>
-                <input type="text" name="Name" required="required">
-                <label for="Date of birth">Date of birth (mm-dd-yyyy):</label>
-                <input type="numeric" maxlength="10" size="10" name="Date of Birth" required="required">
+                <input type="text" name="Name" id="name" required="required">
+                <label for="Dateofbirth">Date of birth (mm-dd-yyyy):</label>
+                <input type="number" size="10" name="Date of Birth" id="Dateofbirth" required="required">
                 <label for="Age">Age:</label>
-                <input type="numeric" maxlength="3" size="3" name="Age">
+                <input type="number" size="3" id="Age" name="Age">
                 <label for="email">E-mail:</label>
-                <input type="email" name="Email">
-                <label for="Phone Number">Phone Number:</label>
-                <input type="tel" name="Phone Number" required="required">
-                <label for="payment type">Payment Type:</label>
-                <select size="1" name="Payment Type" required="required">
+                <input type="email" name="Email" id="email">
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="tel" name="Phone Number" id="PhoneNumber" required="required">
+                <label for="paymenttype">Payment Type:</label>
+                <select size="1" name="Payment Type" id="paymenttype">
                     <option>Select payment type</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
