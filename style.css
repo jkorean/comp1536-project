@@ -132,6 +132,7 @@ p {
     flex: 1 100%;
     background:rgba(255,255,255,0.7);
     position: relative;
+    padding-bottom: 30px;
     
 }
 
@@ -285,11 +286,16 @@ td {
 }
 
 .moreinfo {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 15px;
     position: absolute;
-    bottom: 0px;
-    right: 75px;
-   
+    bottom: 0;
     
+}
+
+.innercontent {
+    display: flexbox;
 }
 
 .myButton {
