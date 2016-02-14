@@ -7,7 +7,7 @@
         <meta charset="utf-8" />
         <!-- Css -->
         <link href="./style.css" type="text/css" rel="stylesheet">
-        <title>Login - AlpineKo</title>
+        <title>Register an Account - AlpineKo</title>
     </head>
     <body>
         <!--Navbar-->
@@ -25,26 +25,33 @@
         </div>
         <div id="banner">
             <div class="innerbanner">
-            <h1>Login</h1>
-            <p></p>
+            <h1>Create An Account</h1>
+            <p>With an account at AlpineKo, you can book lessons, reserve rentals, and keep up to date on our latest news!</p>
             </div>
         </div>
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>
-               Log in!</h2>
+                Create an Account</h2>
                 <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+                
                 <label for="user">Username:</label>
                 <input type="text" id="user" name="user" required="required">
-                <label for="pass">Password:</label>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required="required">
+                <label for="confirmemail">Confirm Email:</label>
+                <input type="email" id="confirmemail" name="confirmemail" required="required">
+                <label for="pass">Enter a password:</label>
                 <input type="password" id="pass" name="pass" required="required">
-                
+                <label for="confirmpass">Confirm your password:</label>
+                <input type="password" id="confirmpass" name="confirmpass" required="required">
                 <input type="submit" id="submit">
-                
+                <input type="reset" id="reset">
                 </form>
             </div>
             <div id="bookingcontent2">
-            <p>Don't have an account? Click <a href="./register.html">here</a> to register!</p>
+            <p>Once you create an account, you can procede to <a href="lessonbooking">Lesson</a> or <a href="rentalbooking">Rental</a> booking to get started!
+            </p>
             </div>
         </div>
         <div id="footer">
@@ -52,7 +59,7 @@
             <ul class="footercontact">
             <li>Phone: 604.555.3434</li>
             <li>Email: <a href="mailto:mail@alpineko.com">mail@alpineko.com</a></li>
-            <li>Find us on Facebook</li>
+            <li>Facsimile: 250.322.3323</li>
             </ul>
             <p>Copyright Lucas Chan - Delan Eliot - Derek Hirotsu - Jim Ko - Daniel Park</p>
             <p>All rights reserved</p>

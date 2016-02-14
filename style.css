@@ -1,8 +1,14 @@
 
+
+
+
+
+
+
 body {
    font-family: 'Roboto Condensed', sans-serif;
    background: #e6e8eb;
-  
+   height:  100%;
 }
 h1 {
     margin:  auto;
@@ -21,9 +27,6 @@ h2 {
     margin-bottom: 5px;
 }
 
-h3 {
-    text-align: center;
-}
 
 p {
     margin-top: 5px;
@@ -111,11 +114,45 @@ p {
 #innernav li a:hover {
     background-color: #1565C0;
 }
+
+
+.login {
+    float:  right;
+    margin-top: 0px;
+}
+.login ul {
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    list-style-type: none;
+    padding-right: 0px;
+    -webkit-padding-start:10px;
+}
+
+.login li a{
+    display: inline-block;
+    color: #D9D9D9;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+    text-decoration: none;
+    background-color: #0c223e;
+    border: solid 1px #000000;
+    margin-right: -8px;
+    width:  85px;
+    font-size: 20px;
+
+}
+
+.login li a:hover {
+    background-color: #1565C0;
+}
 #wrapper {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
-    
+    min-height:100%;
+	position:relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -288,6 +325,10 @@ td {
            
 }
 
+#footer a {
+    color: #FFFFFF;
+}
+
 .innerfooter {
     width: 1000px;
     margin-left: auto;
@@ -306,6 +347,7 @@ td {
 
 .footercontactheader a {
     color: inherit;
+    text-align: inherit;
 }
 .contentimg {
     width: 100%;
