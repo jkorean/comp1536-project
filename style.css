@@ -122,8 +122,23 @@ p {
     border-right: 1px #292929;
     border-left: 1px #292929;
     
+}
+
+#aboutus {
+    width: 1000px;
+    margin: auto;
+}
+
+.aboutusheader {
     
 }
+
+.aboutuscontent {
+    width: 700px;
+    padding-top: 15px;
+    margin: auto;
+}
+
 
 #content1 {
     display: flex;
@@ -171,7 +186,7 @@ p {
 
 form {
     background-color: #eaeaea;
-    padding: 30px 30px 30px 50px;
+    padding: 42px 30px 42px 50px;
 }
 
 form select {
@@ -222,6 +237,27 @@ table {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+#rtable1 {
+    background: white;
+    border-collapse: collapse;
+    height: 200px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#rtable2 {
+    background: white;
+    border-collapse: collapse;
+    height: 200px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 tr {
     border: 2px solid #9ea7af;
     color: #666B85;
@@ -249,9 +285,7 @@ td {
     height: 150px;
     color: #D9D9D9;
     padding-top: 20px;
-    
-  
-    
+           
 }
 
 .innerfooter {
@@ -277,12 +311,7 @@ td {
     width: 100%;
     padding-top: 10px;
     height: 220px;
-    
-}
-
-.contentimg {
-    width: 100%;
-    
+        
 }
 
 .moreinfo {
