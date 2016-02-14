@@ -269,6 +269,7 @@ td {
     height: 150px;
     color: #D9D9D9;
     padding-top: 20px;
+        
     
   
     
@@ -297,12 +298,7 @@ td {
     width: 100%;
     padding-top: 10px;
     height: 220px;
-    
-}
-
-.contentimg {
-    width: 100%;
-    
+        
 }
 
 .moreinfo {
