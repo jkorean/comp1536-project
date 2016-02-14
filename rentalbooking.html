@@ -2,12 +2,157 @@
 
 <html lang="en">
     <head>
-        <!--This links to the appropriate css document.-->
-        <link href="#" type="text/css" rel="stylesheet">
+    <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <meta charset="utf-8" />
-        <title></title>
+    <!-- Css -->
+        <link href="./style.css" type="text/css" rel="stylesheet">
+        <title>Rental Booking | AlpineKo Ski and Board</title>
     </head>
     <body>
-        
+    
+   
+    <!-- First Header -->
+        <div id="navbar">
+
+            <img class="navlogo" src="./images/aklogo.png" alt="">
+            <div id="innernav">
+            <ul>
+            <li><a href="lessons.html">LESSONS</a></li>
+            <li><a href="rentals.html">RENTALS</a></li>
+            <li><a href="accessories.html">TUNE UPS</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+            </div>
+        </div>
+    <!-- Banner -->
+        <div id="banner">
+            <div class="innerbanner">
+            <h1>Rental Booking</h1>
+            <p>Rent Snowboards/Skis and Accessories</p>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="bookingcontent1">
+                <h2>Customer Information</h2>
+                <form>
+                <label for="Rental Type">Rental Type:</label>
+                <select size="1" name="Rental Type">
+                    <option>Select rental type</option>
+                    <option value="Ski">Ski</option>
+                    <option value="Snowboard">Snowboard</option>
+                </select>  
+                <label for="Rental Quality">Rental Quality:</label>
+                <select size="1" name="Rental Quality">
+                    <option>Select rental quality</option>
+                    <option value="New">New</option>
+                    <option value="Used">Used</option>
+                </select>
+                <label for="Ski/Board Length">Ski/Board Length (cm):</label>
+                <input type="numeric" size="3" name="Ski/Board Length">
+                <label for="Accessories">Accessories:</label>
+                <input type="text" name="Accessories">
+                <label for="date">Book a Date:</label>
+                <input type="date" name="Date" required="required">
+                <label for="name">Name:</label>
+                <input type="text" name="Name" required="required">
+                <label for="Date of birth">Date of birth (mm-dd-yyyy):</label>
+                <input type="numeric" maxlength="10" size="10" name="Date of Birth" required="required">
+                <label for="Age">Age:</label>
+                <input type="numeric" maxlength="3" size="3" name="Age">
+                <label for="email">E-mail:</label>
+                <input type="email" name="Email">
+                <label for="Phone Number">Phone Number:</label>
+                <input type="tel" name="Phone Number" required="required">
+                <label for="payment type">Payment Type:</label>
+                <select size="1" name="Payment Type" required="required">
+                    <option>Select payment type</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="American Express">American Express</option>
+                </select>
+                <input type="submit" value="Submit" id="submit">
+                <input type="reset" id="reset">
+            </form>
+            </div>
+            <div id="bookingcontent2">
+            <h2>Prices</h2>
+            <table id="rtable1">
+                <tr>
+                    <th>Rental/day</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Ski/Snowboard (new)</td>
+                    <!--enter price-->
+                    <td>$ 45.00</td>
+                </tr>
+                <tr>
+                    <td>Ski/Snowboard (used)</td>
+                    <!--enter price-->
+                    <td>$ 35.00</td>
+                </tr>
+                <tr>
+                    <td>Helmet</td>
+                    <td>$ 10.00</td>
+                </tr>
+                <tr>
+                    <td>Goggles</td>
+                    <td>$ 8.00</td>
+                </tr>
+                <tr>
+                    <td>Boots</td>
+                    <td>$ 25.00</td>
+                </tr>
+            </table>
+            <h2>Ski/Snowboard Sizing (cm)</h2>
+            <table id="rtable2">
+                <tr>
+                    <th>height</th>
+                    <th>Snowboard</th>
+                    <th>Ski</th></tr>
+                <tr>
+                    <!--height of individual-->
+                    <td>147</td>
+                    <!--board length-->
+                    <td>128-136</td>
+                    <!--ski length-->
+                    <td>130-139</td>
+                </tr>
+                <tr>
+                    <td>158</td>
+                    <td>139-147</td>
+                    <td>150-159</td>
+                </tr>
+                <tr>
+                    <td>168</td>
+                    <td>149-157</td>
+                    <td>160-169</td>
+                </tr>
+                <tr>
+                    <td>173</td>
+                    <td>154-162</td>
+                    <td>170-179</td>
+                </tr>
+                <tr>
+                    <td>183</td>
+                    <td>160+</td>
+                    <td>180-189</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="innerfooter">
+            <ul class="footercontact">
+            <li>Phone: 604.555.3434</li>
+            <li>Email: <a href="mailto:mail@alpineko.com">mail@alpineko.com</a></li>
+            <li>Facsimile: 250.322.3323</li>
+            </ul>
+            <p>Copyright Lucas Chan - Delan Eliot - Derek Hirotsu - Jim Ko - Daniel Park</p>
+            <p>All rights reserved</p>
+            <h3 class="footercontactheader"><a href="./contact.html">Contact Us</a></h3>
+            </div>
+        </div>
     </body>
 </html>
