@@ -182,7 +182,7 @@ p {
 
 form {
     background-color: #eaeaea;
-    padding: 30px 30px 30px 50px;
+    padding: 42px 30px 42px 50px;
 }
 
 form select {
@@ -227,6 +227,27 @@ table {
     background: white;
     border-collapse: collapse;
     height: 210px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#rtable1 {
+    background: white;
+    border-collapse: collapse;
+    height: 200px;
+    margin: auto;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#rtable2 {
+    background: white;
+    border-collapse: collapse;
+    height: 200px;
     margin: auto;
     max-width: 320px;
     width: 100%;

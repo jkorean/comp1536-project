@@ -1,38 +1,49 @@
+<!DOCTYPE html>
+
 <html lang="en">
     <head>
+    <!-- Font -->
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <meta charset="utf-8" />
+    <!-- Css -->
         <link href="./style.css" type="text/css" rel="stylesheet">
-        <title>AlpineKo Ski and Board</title>
+        <title>Lesson Booking | AlpineKo Ski and Board</title>
     </head>
     <body>
+    
+   
+    <!-- First Header -->
         <div id="navbar">
 
-            <img class="navlogo" src="./images/aklogo.png">
+            <img class="navlogo" src="./images/aklogo.png" alt="">
             <div id="innernav">
             <ul>
             <li><a href="lessons.html">LESSONS</a></li>
-            <li><a href="#">RENTALS</a></li>
-            <li><a href="#">TUNE UPS</a></li>
-            <li><a href="#">ABOUT US</a></li>
+            <li><a href="rentals.html">RENTALS</a></li>
+            <li><a href="accessories.html">TUNE UPS</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
             </ul>
             </div>
         </div>
-        <div class="header">
-            <h1><a><img src="" alt="Company Logo"></a>Lesson Booking</h1>
+    <!-- Banner -->
+        <div id="banner">
+            <div class="innerbanner">
+            <h1>Lesson Booking</h1>
+            <p>Book a Ski or Snowboard lesson</p>
+            </div>
         </div>
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form>
-                <label for="Lesson Type">Lesson Type:</label>
-                <select size="1" name="Lesson Type">
+                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
+                <label for="LessonType">Lesson Type:</label>
+                <select size="1" name="Lesson Type" id="LessonType">
                     <option>Select lesson type</option>
                     <option value="Ski">Ski</option>
                     <option value="Snowboard">Snowboard</option>
                 </select>  
-                <label for="Skill Level">Skill Level:</label>
-                <select size="1" name="Skill Level" required="required">
+                <label for="SkillLevel">Skill Level:</label>
+                <select size="1" name="Skill Level" id="SkillLevel">
                     <option>Select skill level</option>
                     <option value="Beginner">Beginner</option>
                     <option value="Novice">Novice</option>
@@ -40,19 +51,19 @@
                     <option value="Advanced">Advanced</option>
                 </select>
                 <label for="date">Book a Date:</label>
-                <input type="date" name="Date" required="required">
+                <input type="date" name="Date" id="date" required="required">
                 <label for="name">Name:</label>
-                <input type="text" name="Name" required="required">
-                <label for="Date of birth">Date of birth (mm-dd-yyyy):</label>
-                <input type="numeric" maxlength="10" size="10" name="Date of Birth" required="required">
+                <input type="text" name="Name" id="name" required="required">
+                <label for="Dateofbirth">Date of birth (mm-dd-yyyy):</label>
+                <input type="text" size="10" name="Date of Birth" id="Dateofbirth" required="required">
                 <label for="Age">Age:</label>
-                <input type="numeric" maxlength="3" size="3" name="Age">
+                <input type="text" size="3" id="Age" name="Age">
                 <label for="email">E-mail:</label>
-                <input type="email" name="Email">
-                <label for="Phone Number">Phone Number:</label>
-                <input type="tel" name="Phone Number" required="required">
-                <label for="payment type">Payment Type:</label>
-                <select size="1" name="Payment Type" required="required">
+                <input type="email" name="Email" id="email">
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="tel" name="Phone Number" id="PhoneNumber" required="required">
+                <label for="paymenttype">Payment Type:</label>
+                <select size="1" name="Payment Type" id="paymenttype">
                     <option>Select payment type</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
