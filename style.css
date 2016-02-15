@@ -325,6 +325,29 @@ td {
     padding: 0;
 }
 
+/*sitemap styling*/
+#sitemap {
+    width: 1000px;
+    margin: auto;
+    background: rgba(255,255,255,0.7);
+}
+
+.sitemaplist {
+    padding: 30px 0 30px 60px;
+    list-style-type: none;
+}
+
+.lessonlist {
+    list-style-type: none;
+}
+
+.rentallist {
+    list-style-type: none;
+}
+
+#sitemap li a {
+    text-decoration: none;
+}
 
 /*footer styling*/
 #footer{
