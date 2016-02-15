@@ -1,9 +1,8 @@
-/*overall selector styling*/
 
 body {
    font-family: 'Roboto Condensed', sans-serif;
    background: #e6e8eb;
-   height:  100%;
+  
 }
 h1 {
     margin:  auto;
@@ -22,12 +21,13 @@ h2 {
     margin-bottom: 5px;
 }
 
+h3 {
+    text-align: center;
+}
 
 p {
     margin-top: 5px;
 }
-
-/*banner styling*/
 #banner {
     padding-top: 50px;
     background-image: url(./images/banner.png);
@@ -45,8 +45,6 @@ p {
     margin-left: auto;
     margin-right: auto;
 }
-
-/*navigation styling*/
 .navlogo {
     float: left;
     
@@ -113,48 +111,11 @@ p {
 #innernav li a:hover {
     background-color: #1565C0;
 }
-
-
-.login {
-    float:  right;
-    margin-top: 0px;
-}
-.login ul {
-    float: right;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    
-    list-style-type: none;
-    padding-right: 0px;
-    -webkit-padding-start:10px;
-}
-
-.login li a{
-    display: inline-block;
-    color: #D9D9D9;
-    text-align: center;
-    padding: 15px 5px 15px 5px;
-    text-decoration: none;
-    background-color: #0c223e;
-    border: solid 1px #000000;
-    margin-right: -8px;
-    width:  85px;
-    font-size: 20px;
-
-}
-
-.login li a:hover {
-    background-color: #1565C0;
-}
-
-
-/*wrapper and main div styling*/
 #wrapper {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
-    min-height:100%;
-	position:relative;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -186,7 +147,6 @@ p {
     flex: 1 100%;
     background:rgba(255,255,255,0.7);
     position: relative;
-    padding-bottom: 30px;
     
 }
 
@@ -209,13 +169,6 @@ p {
     background:rgba(255,255,255,0.7);
 }
 
-.contentimg {
-    width: 100%;
-    padding-top: 10px;
-    height: 220px;
-        
-}
-/*booking content flex box styling*/
 #bookingcontent1 {
     display: flexbox;
     padding: 20px 10px 20px 40px;
@@ -230,7 +183,6 @@ p {
     background: rgba(255,255,255,0.7);
 }
 
-/*form and table styling*/
 form {
     background-color: #eaeaea;
     padding: 42px 30px 42px 50px;
@@ -325,43 +277,17 @@ td {
     padding: 0;
 }
 
-/*sitemap styling*/
-#sitemap {
-    width: 1000px;
-    margin: auto;
-    background: rgba(255,255,255,0.7);
-}
-
-.sitemaplist {
-    padding: 30px 0 30px 60px;
-    list-style-type: none;
-}
-
-.lessonlist {
-    list-style-type: none;
-}
-
-.rentallist {
-    list-style-type: none;
-}
-
-#sitemap li a {
-    text-decoration: none;
-}
-
-/*footer styling*/
 #footer{
     text-align: center;
-    margin: 0;
     background-color: #0c223e; 
     height: 150px;
     color: #D9D9D9;
     padding-top: 20px;
+    bottom: 0px;
+    left: 0px;
+    position:  absolute;
+    width: 100%;
            
-}
-
-#footer a {
-    color: #FFFFFF;
 }
 
 .innerfooter {
@@ -382,18 +308,22 @@ td {
 
 .footercontactheader a {
     color: inherit;
-    text-align: inherit;
+}
+.contentimg {
+    width: 100%;
+    padding-top: 10px;
+    height: 220px;
+        
 }
 
-
-
-
-.innercontent {
-    display: flexbox;
+.moreinfo {
+    position: absolute;
+    bottom: 0px;
+    right: 75px;
+   
+    
 }
 
-
-/*button styles for more info button*/
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -424,14 +354,5 @@ td {
 .myButton:active {
 	position:relative;
 	top:1px;
-    
-}
-
-.moreinfo {
-    text-align: center;
-    margin: auto;
-    padding-bottom: 15px;
-    position: absolute;
-    bottom: 0;
     
 }
