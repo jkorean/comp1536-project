@@ -277,6 +277,26 @@ td {
     padding: 0;
 }
 
+
+#sitemap {
+    width: 1000px;
+    margin: auto;
+    background: rgba(255,255,255,0.7);
+}
+
+.sitemaplist {
+    padding: 30px 0 30px 60px;
+    list-style-type: none;
+}
+
+.sitemaplist li {
+    list-style-type:  none;
+}
+
+#sitemap li a {
+    text-decoration: none;
+}
+
 #footer{
     text-align: center;
     background-color: #0c223e; 
@@ -287,7 +307,6 @@ td {
     left: 0px;
     position:  absolute;
     width: 100%;
-           
 }
 
 .innerfooter {
