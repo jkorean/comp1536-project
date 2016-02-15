@@ -391,8 +391,12 @@ td {
 .innercontent {
     display: flexbox;
 }
-
-
+/*ID to center button element*/
+#button {
+    margin: auto;
+    width:  70%;
+    padding: 10px;
+}
 /*button styles for more info button*/
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
