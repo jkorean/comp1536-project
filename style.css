@@ -391,7 +391,7 @@ td {
 .innercontent {
     display: flexbox;
 }
-
+/*ID to center button element*/
 #button {
     margin: auto;
     width:  70%;
