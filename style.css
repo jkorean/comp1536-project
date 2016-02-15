@@ -337,12 +337,8 @@ td {
     list-style-type: none;
 }
 
-.lessonlist {
-    list-style-type: none;
-}
-
-.rentallist {
-    list-style-type: none;
+.sitemaplist li {
+    list-style-type:  none;
 }
 
 #sitemap li a {
