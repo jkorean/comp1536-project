@@ -153,14 +153,13 @@ p {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
-    min-height:100%;
+    min-height: 100%;
 	position:relative;
-    display: flex;
+    display:  flexbox;
     flex-direction: row;
     justify-content: space-between;
     border-right: 1px #292929;
     border-left: 1px #292929;
-    
 }
 
 #aboutus {
@@ -168,9 +167,6 @@ p {
     margin: auto;
 }
 
-.aboutusheader {
-    
-}
 
 .aboutuscontent {
     width: 700px;
@@ -358,6 +354,9 @@ td {
 
 #footer a {
     color: #FFFFFF;
+    width: 100%;
+    bottom: 0px;
+    position: relative;
 }
 
 .innerfooter {
