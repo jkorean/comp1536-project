@@ -244,6 +244,12 @@ label {
     margin-top: 10px;
 }
 
+.errorLabel {
+    
+    color: #d50505;
+    font-size: 9px;
+}
+
 input, textarea { 
     margin-top: 10px;
     display: block;
