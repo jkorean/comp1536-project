@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<body>
-<script language="javascript">
 
 
-function nameValidate(id){
+function nameValidate(){
 
-var name = document.getElementById(id).value;
+var date = document.getElementById("dateError").value;
 
 if (name.match(/^[a-zA-Z]{1,35}$/ == null) {
 
@@ -35,9 +31,3 @@ document.getElementById("Invalid").innerHTML = "Invalid Email.";
 	
 	}
 	}
-	
-	
-	</script>
-	
-</body>
-</html> 
