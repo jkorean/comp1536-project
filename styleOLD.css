@@ -83,6 +83,9 @@ p {
     
 }
 
+
+
+
 #innernav ul {
     float: left;
     margin-top: 0px;
@@ -150,6 +153,8 @@ p {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
+	position:relative;
+    display:  flexbox;
     min-height:100%;
 	position:relative;
     display: flex;
@@ -166,10 +171,10 @@ p {
 }
 
 .aboutuscontent {
+    width: 700px;
+    padding-top: 30px;
+    padding-bottom: 50px;
     margin: auto;
-    width:  80%;
-    background: rgba(255,255,255,0.7);
-    padding: 20px 40px 0px 40px;
 }
 
 
@@ -345,6 +350,9 @@ td {
     list-style-type: none;
 }
 
+.sitemaplist li a {
+    text-decoration:  none;
+        
 .lessonlist {
     list-style-type: none;
 }
@@ -358,13 +366,16 @@ td {
 }
 
 /*footer styling*/
-#footer{
+
+#footer {
+    
     text-align: center;
     margin: 0;
     background-color: #0c223e; 
     height: 150px;
     color: #D9D9D9;
     padding-top: 20px;
+    
            
 }
 
@@ -392,9 +403,6 @@ td {
     color: inherit;
     text-align: inherit;
 }
-
-
-
 
 .innercontent {
     display: flexbox;
