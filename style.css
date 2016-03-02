@@ -35,7 +35,9 @@ p {
     
     height:  250px;
    
-    background-repeat:  no-repeat;      
+    background-repeat:  no-repeat;
+   
+        
 }
 
 .innerbanner {
@@ -63,6 +65,9 @@ p {
     background-color: #0c223e;
     overflow: hidden;
     z-index: 2;
+
+    
+
 }
 
 #navbar ul li{
@@ -74,6 +79,8 @@ p {
     width: 1000px;
     margin-left: auto;
     margin-right:  auto;
+    
+    
 }
 
 
@@ -146,13 +153,16 @@ p {
     width: 1000px;
     margin-left:  auto;
     margin-right:  auto;
-    min-height: 100%;
 	position:relative;
     display:  flexbox;
+    min-height:100%;
+	position:relative;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-right: 1px #292929;
     border-left: 1px #292929;
+    
 }
 
 #aboutus {
@@ -160,10 +170,10 @@ p {
     margin: auto;
 }
 
-
 .aboutuscontent {
     width: 700px;
-    padding-top: 15px;
+    padding-top: 30px;
+    padding-bottom: 50px;
     margin: auto;
 }
 
@@ -323,8 +333,15 @@ td {
     list-style-type: none;
 }
 
-.sitemaplist li {
-    list-style-type:
+.sitemaplist li a {
+    text-decoration:  none;
+        
+.lessonlist {
+    list-style-type: none;
+}
+
+.rentallist {
+    list-style-type: none;
 }
 
 #sitemap li a {
@@ -344,9 +361,6 @@ td {
 
 #footer a {
     color: #FFFFFF;
-    width: 100%;
-    bottom: 0;
-    position: relative;
 }
 
 .innerfooter {
@@ -370,14 +384,15 @@ td {
     text-align: inherit;
 }
 
-
-
-
 .innercontent {
     display: flexbox;
 }
-
-
+/*ID to center button element*/
+.button {
+    margin: auto;
+    width:  70%;
+    padding: 10px;
+}
 /*button styles for more info button*/
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
