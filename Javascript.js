@@ -2,15 +2,12 @@
 
 function nameValidate(){
 
-var date = document.getElementById("dateError").value;
+var name = document.lessonForm.name.value;
 
-if (name.match(/^[a-zA-Z]{1,35}$/ == null) {
+if (name == "") {
 
-	document.getElementById("Invalid").innerHTML = "Invalid Name.";
-	
-	}else {
-	
-	document.getElementbyId("Invalid").innerHTML = "";
+	document.getElementById("nameError").innerHTML = "Please enter a name.";
+    document.getElementById("nameError").style.display = "inline";
 	
 	}
 	}
@@ -30,4 +27,6 @@ document.getElementById("Invalid").innerHTML = "Invalid Email.";
 	document.getElementbyId(Invalid").innerHTML = "";
 	
 	}
-	}
+}
+
+function

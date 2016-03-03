@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-    <script src="Javascript.js"></script>
+    <script type="text/javascript" src="Javascript.js"></script>
     <!-- Font -->
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <meta charset="utf-8" />
@@ -41,19 +41,19 @@
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
-                <label for="LessonType">Lesson Type: <span class="errorLabel" id="LessonTypeError">Error</span> </label>
+                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" name="lessonForm" onsubmit="return submitValidate();">
+                <label for="LessonType">Lesson Type: <span class="errorLabel" id="LessonTypeError">Please select a lesson type</span> </label>
                     
-                <select size="1" name="Lesson Type" id="LessonType">
-                    <option>Select lesson type</option>
+                <select size="1" name="lessonType" id="lessonType" onblur="typeValidate();">
+                    <option value="">Select lesson type</option>
                     <option value="Ski">Ski</option>
                     <option value="Snowboard">Snowboard</option>
                 </select>
                      
-                <label for="SkillLevel">Skill Level: <span class="errorLabel" id="SkillLevelError">Error</span></label>
+                <label for="SkillLevel">Skill Level: <span class="errorLabel" id="SkillLevelError">Please select a skill level</span></label>
                     
-                <select size="1" name="Skill Level" id="SkillLevel">
-                    <option>Select skill level</option>
+                <select size="1" name="skillLevel" id="skillLevel" onblur="skillValidate();">
+                    <option value="">Select skill level</option>
                     <option value="Beginner">Beginner</option>
                     <option value="Novice">Novice</option>
                     <option value="Intermediate">Intermediate</option>
@@ -64,30 +64,30 @@
                     
                 <input type="date" name="Date" id="date" required="required">
                     
-                <label for="name">Name: <span class="errorLabel" id="nameError">Error</span></label>
-                <input type="text" name="Name" id="name" required="required">
+                <label for="name">Name: <span class="errorLabel" id="nameError">Please enter your name.</span></label>
+                <input type="text" name="name" id="name" onblur="nameValidate();">
                     
-                <label for="dateOfBirth">Date of birth (mm-dd-yyyy): <span class="errorLabel" id="dateOfBirthError">Error</span></label>
-                <input type="text" size="10" name="Date of Birth" id="dateOfBirth" required="required">
+                <label for="dateOfBirth">Date of birth (mm-dd-yyyy): <span class="errorLabel" id="dateOfBirthError">Date not valid.</span></label>
+                <input type="text" size="10" name="dateOfBirth" id="dateOfBirth" onblur="dobValidate();">
                     
-                <label for="Age">Age: <span class="errorLabel" id="ageError">Error</span></label>
-                <input type="text" size="3" id="Age" name="Age">
+                <label for="Age">Age: <span class="errorLabel" id="ageError">Please enter an age.</span></label>
+                <input type="text" size="3" id="Age" name="Age" onblur="ageValidate();">
                     
-                <label for="email">E-mail: <span class="errorLabel" id="emailError">Error</span></label>
-                <input type="email" name="Email" id="email">
+                <label for="email">E-mail: <span class="errorLabel" id="emailError">Please enter a valid email!</span></label>
+                <input type="email" name="email" id="email" onblur="emailValidate();">
                     
-                <label for="PhoneNumber">Phone Number: <span class="errorLabel" id="phoneNumberError">Error</span></label>
-                <input type="tel" name="Phone Number" id="phoneNumber" required="required">
+                <label for="PhoneNumber">Phone Number: <span class="errorLabel" id="phoneNumberError">Please enter a valid phone number.</span></label>
+                <input type="tel" name="Phone Number" id="phoneNumber" onblur="phoneValidate();">
                     
-                <label for="paymenttype">Payment Type: <span class="errorLabel" id="paymentTypeError">Error</span></label>
-                <select size="1" name="Payment Type" id="paymentType">
-                    <option>Select payment type</option>
+                <label for="paymentType">Payment Type: <span class="errorLabel" id="paymentTypeError">Select a payment type</span></label>
+                <select size="1" name="paymentType" id="paymentType" onblur="paymentValidate();">
+                    <option value="">Select payment type</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
                     <option value="American Express">American Express</option>
                 </select>
                     
-                <input type="submit" id="submit">
+                <input type="submit" id="submit" >
                 <input type="reset" id="reset">
             </form>
             </div>
@@ -138,5 +138,143 @@
             <p><a href="Sitemap.html">Site Map</a></p>
             </div>
         </div>
+        <script type="text/javascript">
+            function nameValidate() {
+
+                var nameError = document.getElementById("nameError");
+                var name = document.lessonForm.name;
+
+
+                if (name.value === "") {
+                    nameError.style.display = "inline";
+                    return false;
+                }
+                else {
+                    nameError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function phoneValidate() {
+                var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+                var phoneNum = document.lessonForm.phoneNumber;
+                var phoneError = document.getElementById("phoneNumberError");
+
+                if (phoneNum.value === "") {
+                    phoneError.style.display = "inline";
+                    return false;
+
+                } else if (phoneNum.value.match(phoneRegex) == null) {
+                    phoneError.style.display = "inline";
+                    return false;
+                }
+                else {
+                    phoneError.style.display = "none";
+                    return true;
+                }
+
+            }
+
+            function dobValidate() {
+                var dobRegex = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/;
+                var dob = document.lessonForm.dateOfBirth;
+                var dobError = document.getElementById("dateOfBirthError");
+
+                if (dob.value === "") {
+                    dobError.style.display = "inline";
+                    return false;
+                } else if (dob.value.match(dobRegex) == null) {
+                    dobError.style.display = "inline";
+                    return false;
+                } else {
+                    dobError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function emailValidate() {
+
+                var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+                var email = document.lessonForm.email;
+
+                var emailError = document.getElementById("emailError");
+
+                if (email.value === "") {
+                    emailError.style.display = "inline";
+                    return false;
+                } else if (email.value.match(emailRegex) == null) {
+                    emailError.style.display = "inline";
+                    return false;
+                } else {
+                    emailError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function typeValidate() {
+                var type = document.lessonForm.lessonType;
+                var typeError = document.getElementById("LessonTypeError");
+
+                if (type.valueOf == "default") {
+                    typeError.style.display = "inline";
+                    return false;
+                }
+                else {
+                    typeError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function skillValidate() {
+                var skill = document.lessonForm.skillLevel;
+                var skillError = document.getElementById("SkillLevelError");
+
+                if (skill.value == "") {
+                    skillError.style.display = "inline";
+                    return false;
+                }
+                else {
+                    skillError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function ageValidate() {
+                var age = document.lessonForm.Age;
+                var ageError = document.getElementById("ageError");
+
+                if (age.value === "") {
+                    ageError.style.display = "inline";
+                    return false;
+                } else {
+                    ageError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function paymentValidate() {
+                var payment = document.lessonForm.paymentType;
+                var paymentError = document.getElementById("paymentTypeError");
+
+                if (payment.value == "") {
+                    paymentError.style.display = "inline";
+                    return false;
+                }
+                else {
+                    paymentError.style.display = "none";
+                    return true;
+                }
+            }
+
+            function submitValidate() {
+                if (nameValidate() && phoneValidate() && dobValidate() && emailValidate() && typeValidate() && skillValidate() && ageValidate() && paymentValidate()) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            } 
+        </script>
+
     </body>
 </html>
