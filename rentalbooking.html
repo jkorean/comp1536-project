@@ -39,48 +39,48 @@
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp">
-                <label for="RentalType">Rental Type: <span class="errorLabel" id="RentalTypeError">Error</span></label>
-                <select size="1" name="Rental Type" id="RentalType">
-                    <option>Select rental type</option>
+                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" name="rentalForm" onsubmit="return submitValidate()">
+                <label for="RentalType">Rental Type: <span class="errorLabel" id="RentalTypeError">Please select a rental type.</span></label>
+                <select size="1" name="RentalType" id="RentalType" onblur="typeValidate();">
+                    <option value="">Select rental type</option>
                     <option value="Ski">Ski</option>
                     <option value="Snowboard">Snowboard</option>
                 </select>  
                     
-                <label for="RentalQuality">Rental Quality: <span class="errorLabel" id="RentalQualityError">Error</span></label>
-                <select size="1" name="Rental Quality" id="RentalQuality">
-                    <option>Select rental quality</option>
+                <label for="RentalQuality">Rental Quality: <span class="errorLabel" id="RentalQualityError">Please enter a rental quality.</span></label>
+                <select size="1" name="RentalQuality" id="RentalQuality" onblur="qualityValidate();">
+                    <option value="">Select rental quality</option>
                     <option value="New">New</option>
                     <option value="Used">Used</option>
                 </select>
 
-                <label for="Ski/BoardLength">Ski/Board Length (cm): <span class="errorLabel" id="Ski/BoardLengthError">Error</span></label>
-                <input type="text" size="6" name="Ski/Board Length" id="Ski/BoardLength">
+                <label for="Length">Ski/Board Length (cm): <span class="errorLabel" id="Ski/BoardLengthError">Length not valid.</span></label>
+                <input type="text" size="6" name="Length" id="Length" onblur="lengthValidate();">
 
-                <label for="Accessories">Accessories: <span class="errorLabel" id="AccessoriesError">Error</span></label>
-                <input type="text" name="Accessories" id="Accessories">
+                <label for="Accessories">Accessories: <span class="errorLabel" id="accessoryError">Please enter an accessory.</span></label>
+                <input type="text" name="Accessories" id="Accessories" onblur="accessoryValidate();">
                     
                 <label for="date">Book a Date: <span class="errorLabel" id="dateError">Error</span></label>
                 <input type="date" name="date" id="date" required="required">
                     
-                <label for="name">Name: <span class="errorLabel" id="nameError">Error</span></label>
-                <input type="text" name="Name" id="name" required="required">
+                <label for="name">Name: <span class="errorLabel" id="nameError">Please enter your name.</span></label>
+                <input type="text" name="Name" id="name" onblur="nameValidate();">
                     
-                <label for="Dateofbirth">Date of birth (mm-dd-yyyy):  <span class="errorLabel" id="DateofbirthError">Error</span></label>
-                <input type="text" size="10" name="Date of Birth" id="Dateofbirth" required="required">
+                <label for="dateOfBirth">Date of birth (mm-dd-yyyy): <span class="errorLabel" id="dateOfBirthError">Date not valid.</span></label>
+                <input type="text" size="10" name="dateOfBirth" id=dateOfBirth" required="required" onblur="dobValidate();">
                    
-                <label for="Age">Age: <span class="errorLabel" id="AgeError">Error</span></label>
-                <input type="text" size="3" id="Age" name="Age">
+                <label for="Age">Age: <span class="errorLabel" id="ageError">Please enter an age.</span></label>
+                <input type="text" size="3" id="Age" name="Age" onblur="ageValidate();">
                     
-                <label for="email">E-mail: <span class="errorLabel" id="emailError">Error</span></label>
-                <input type="email" id="email" name="Email">
+                <label for="email">E-mail: <span class="errorLabel" id="emailError">Please enter a valid email.</span></label>
+                <input type="email" id="email" name="email" onblur="emailValidate();">
                    
-                <label for="PhoneNumber">Phone Number: <span class="errorLabel" id="PhoneNumberError">Error</span></label>
-                <input type="tel" name="Phone Number" id="PhoneNumber" required="required">
+                <label for="phoneNumber">Phone Number: <span class="errorLabel" id="phoneNumberError">Enter a valid phone number.</span></label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" onblur="phoneValidate();">
                     
-                <label for="paymenttype">Payment Type: <span class="errorLabel" id="paymenttypeError">Error</span></label>
-                <select size="1" name="Payment Type" id="paymenttype">
-                    <option>Select payment type</option>
+                <label for="paymentType">Payment Type: <span class="errorLabel" id="paymentTypeError">Select a payment type.</span></label>
+                <select size="1" name="paymentType" id="paymentType" onblur="paymentValidate();">
+                    <option value="">Select payment type</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
                     <option value="American Express">American Express</option>
@@ -171,5 +171,177 @@
             <p><a href="Sitemap.html">Site Map</a></p>
             </div>
         </div>
+
+         <script type="text/javascript">
+             function nameValidate() {
+
+                 var nameError = document.getElementById("nameError");
+                 var name = document.rentalForm.name;
+
+
+                 if (name.value === "") {
+                     nameError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     nameError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function lengthValidate() {
+                 var lengthRegex = /[0-9]{3}/;
+                 var length = document.rentalForm.Length;
+                 var lengthError = document.getElementById("Ski/BoardLengthError");
+
+                 if (length.value === "") {
+                     lengthError.style.display = "inline";
+                     return false;
+                 } else if (length.value.match(lengthRegex) == null) {
+                     lengthError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     lengthError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function accessoryValidate() {
+
+                 var accessoryError = document.getElementById("accessoryError");
+                 var accessory = document.rentalForm.Accessories;
+
+
+                 if (accessory.value === "") {
+                     accessoryError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     accessoryError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function phoneValidate() {
+                 var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+                 var phoneNum = document.rentalForm.phoneNumber;
+                 var phoneError = document.getElementById("phoneNumberError");
+
+                 if (phoneNum.value === "") {
+                     phoneError.style.display = "inline";
+                     return false;
+
+                 } else if (phoneNum.value.match(phoneRegex) == null) {
+                     phoneError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     phoneError.style.display = "none";
+                     return true;
+                 }
+
+             }
+
+             function dobValidate() {
+                 var dobRegex = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/;
+                 var dob = document.rentalForm.dateOfBirth;
+                 var dobError = document.getElementById("dateOfBirthError");
+
+                 if (dob.value === "") {
+                     dobError.style.display = "inline";
+                     return false;
+                 } else if (dob.value.match(dobRegex) == null) {
+                     dobError.style.display = "inline";
+                     return false;
+                 } else {
+                     dobError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function emailValidate() {
+
+                 var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
+                 var email = document.rentalForm.email;
+
+                 var emailError = document.getElementById("emailError");
+
+                 if (email.value === "") {
+                     emailError.style.display = "inline";
+                     return false;
+                 } else if (email.value.match(emailRegex) == null) {
+                     emailError.style.display = "inline";
+                     return false;
+                 } else {
+                     emailError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function typeValidate() {
+                 var type = document.rentalForm.RentalType;
+                 var typeError = document.getElementById("RentalTypeError");
+
+                 if (type.value == "") {
+                     typeError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     typeError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function qualityValidate() {
+                 var quality = document.rentalForm.RentalQuality;
+                 var qualityError = document.getElementById("RentalQualityError");
+
+                 if (quality.value == "") {
+                     qualityError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     qualityError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function ageValidate() {
+                 var age = document.rentalForm.Age;
+                 var ageError = document.getElementById("ageError");
+
+                 if (age.value === "") {
+                     ageError.style.display = "inline";
+                     return false;
+                 } else {
+                     ageError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function paymentValidate() {
+                 var payment = document.rentalForm.paymentType;
+                 var paymentError = document.getElementById("paymentTypeError");
+
+                 if (payment.value == "") {
+                     paymentError.style.display = "inline";
+                     return false;
+                 }
+                 else {
+                     paymentError.style.display = "none";
+                     return true;
+                 }
+             }
+
+             function submitValidate() {
+                 if (nameValidate() && phoneValidate() && lengthValidate() && dobValidate() && emailValidate() && typeValidate() && qualityValidate() && ageValidate() && paymentValidate()) {
+                     return true;
+                 }
+                 else {
+                     return false;
+                 }
+             } 
+        </script>
     </body>
 </html>
