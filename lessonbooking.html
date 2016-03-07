@@ -241,7 +241,7 @@
                 var type = document.lessonForm.lessonType;
                 var typeError = document.getElementById("LessonTypeError");
 
-                if (type.valueOf == "default") {
+                if (type.value == "") {
                     typeError.style.display = "inline";
                     return false;
                 }
