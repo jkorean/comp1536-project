@@ -150,6 +150,14 @@
                     return true;
                 }
             }
+            function submitValidate() {
+                 if (usernameValidate() && emailValidate() && confirmemailValidate() && passwordValidate() && confirmpassValidate()) {
+                     return true;
+                 }
+                 else {
+                     return false;
+                 }
+             } 
         </script>
     </body>
 </html>
