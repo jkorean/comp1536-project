@@ -263,11 +263,11 @@ input, textarea {
     display: block;
 }
 
-#submit {
+.submit {
     margin-left: 260px;
 }
 
-#reset {
+.reset {
     margin-left: 355px;
     margin-top: -21px;
 }

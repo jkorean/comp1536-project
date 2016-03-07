@@ -41,17 +41,18 @@
         <div id="wrapper">
             <div id="bookingcontent1">
                 <h2>Customer Information</h2>
-                <form method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" name="lessonForm" onsubmit="return submitValidate();">
-                <label for="LessonType">Lesson Type: <span class="errorLabel" id="LessonTypeError">Please select a lesson type</span> </label>
-                    
+
+                <form id="myForm" method="post" action="http://webdevfoundations.net/scripts/formdemo.asp" name="lessonForm" onsubmit="return submitValidate();">
+                <!--Lesson selection field. Uses typeValidate() function.-->
+                <label for="LessonType">Lesson Type: <span class="errorLabel" id="LessonTypeError">Please select a lesson type</span> </label>                   
                 <select size="1" name="lessonType" id="lessonType" onblur="typeValidate();">
                     <option value="">Select lesson type</option>
                     <option value="Ski">Ski</option>
                     <option value="Snowboard">Snowboard</option>
                 </select>
                      
-                <label for="SkillLevel">Skill Level: <span class="errorLabel" id="SkillLevelError">Please select a skill level</span></label>
-                    
+                <label for="SkillLevel">Skill Level: <span class="errorLabel" id="SkillLevelError">Please select a skill level</span></label>                    
+                <!--Skill level selection field. Uses skillValidate() function.-->
                 <select size="1" name="skillLevel" id="skillLevel" onblur="skillValidate();">
                     <option value="">Select skill level</option>
                     <option value="Beginner">Beginner</option>
@@ -60,68 +61,73 @@
                     <option value="Advanced">Advanced</option>
                 </select>
                     
-                <label for="date">Book a Date: <span class="errorLabel" id="dateError">Error</span></label>
-                    
+                <label for="date">Book a Date: <span class="errorLabel" id="dateError">Error</span></label>                  
                 <input type="date" name="Date" id="date" required="required">
                     
                 <label for="name">Name: <span class="errorLabel" id="nameError">Please enter your name.</span></label>
+                <!--Name input text field. Uses nameValidate() function.-->
                 <input type="text" name="name" id="name" onblur="nameValidate();">
-                    
+                
+                <!--Changed this for now. Currently using calendar style below.   
                 <label for="dateOfBirth">Date of birth (mm-dd-yyyy): <span class="errorLabel" id="dateOfBirthError">Date not valid.</span></label>
                 <input type="text" size="10" name="dateOfBirth" id="dateOfBirth" onblur="dobValidate();">
-                    
-                <label for="Age">Age: <span class="errorLabel" id="ageError">Please enter an age.</span></label>
-                <input type="text" size="3" id="Age" name="Age" onblur="ageValidate();">
-                    
+                -->
+                <label for="dateOfBirth">Date of birth: <span class="errorLabel" id="dateOfBirthError">Date not valid.</span></label>
+                <input type="date" name="Date" id="dateOfBirth" required="required">
+
                 <label for="email">E-mail: <span class="errorLabel" id="emailError">Please enter a valid email!</span></label>
+                <!--Text field for email. Uses emailValidate() function.-->
                 <input type="email" name="email" id="email" onblur="emailValidate();">
                     
-                <label for="PhoneNumber">Phone Number: <span class="errorLabel" id="phoneNumberError">Please enter a valid phone number.</span></label>
+                <label for="PhoneNumber">Phone: <span class="errorLabel" id="phoneNumberError">Please enter a valid phone number.</span></label>
+                <!--Text field for phone number. Uses phoneValidate() function.-->
                 <input type="tel" name="Phone Number" id="phoneNumber" onblur="phoneValidate();">
                     
                 <label for="paymentType">Payment Type: <span class="errorLabel" id="paymentTypeError">Select a payment type</span></label>
+                <!--Payment type selection field. Uses paymentValidate() function.-->
                 <select size="1" name="paymentType" id="paymentType" onblur="paymentValidate();">
                     <option value="">Select payment type</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
                     <option value="American Express">American Express</option>
                 </select>
-                    
-                <input type="submit" id="submit" >
-                <input type="reset" id="reset">
+                <!--This button submits the form.-->   
+                <input class="submit" type="button" onclick="formSubmit()" value="Submit">
+                <!--This button resets the form.-->
+                <input class="reset" type="button" onclick="formReset()" value="Reset">
             </form>
             </div>
             <div id="bookingcontent2">
-            <h2>Prices</h2>
-            <table>
-                <tr>
-                    <th>Lessons/day</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Ski/Snowboard</td>
-                    <!--enter price-->
-                    <td>$ 1,000,000.00</td>
-                </tr>
-            </table>
-            <h2>Skill Levels</h2>
-            <table id="table2">
-                <tr>
-                    <td>Beginner</td>
-                    <td>No experience</td>
-                </tr>
-                <tr>
-                    <td>Novice</td>
-                    <td>Few days of experience</td>
-                </tr>
-                <tr>
-                    <td>Intermediate</td>
-                    <td>Able to ski/ride comfortably</td>
-                </tr>
-                <tr>
-                    <td>Advanced</td>
-                    <td>Able to ski/ride comfortably in black diamond terrain</td>
-            </table>
+                <h2>Prices</h2>
+                <table>
+                    <tr>
+                        <th>Lessons/day</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Ski/Snowboard</td>
+                        <!--enter price-->
+                        <td>$ 1,000,000.00</td>
+                    </tr>
+                </table>
+                <h2>Skill Levels</h2>
+                <table id="table2">
+                    <tr>
+                        <td>Beginner</td>
+                        <td>No experience</td>
+                    </tr>
+                    <tr>
+                        <td>Novice</td>
+                        <td>Few days of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Able to ski/ride comfortably</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced</td>
+                        <td>Able to ski/ride comfortably in black diamond terrain</td>
+                </table>
             </div>
         </div>
         <div id="footer">
@@ -137,97 +143,107 @@
             <p><a href="./contact.html">Contact Us</a></p>
             <p><a href="Sitemap.html">Site Map</a></p>
             </div>
+        </div>        
+<!--Divs for the accordion jQuery widget. Currently not working.
+    Unsure of cause. Possibly error with JavaScript implementation.-->        
+<!--    <div id="accordion">
+            <div>
+                <h2> Beginner </h2>
+                <p> For people who have not skied or snowboarded before.</p>
+            </div>      
+            <div>
+                <h2> Novice </h2>
+                <p> For people who have skied or snowboarded a few times but still needs to know the basics.</p>
+            </div>
+            <div>
+            <h2> Intermediate </h2>
+            <p> You can go up the mountains yourself but still need a few pointers here and there.</p>
+            </div>
+            <div>
+            <h2> Advanced </h2>
+            <p> To develop more skills to be the very best.</p>
+            </div>
         </div>
-        
-         
-        <div id="accordion">
-        <div>
-        <h2> Beginner </h2>
-        <p> For people who have not skied or snowboarded before.</p>
-        </div>
-        
-        <div>
-        <h2> Novice </h2>
-        <p> For people who have skied or snowboarded a few times but still needs to know the basics.</p>
-        </div>
-        
-        <div>
-        <h2> Intermediate </h2>
-        <p> You can go up the mountains yourself but still need a few pointers here and there.</p>
-        </div>
-        
-        <div>
-        <h2> Advanced </h2>
-        <p> To develop more skills to be the very best.</p>
-        </div>
-        
-        
-        </div>
-        <script type="text/javascript" >
-        
+-->
+        <script>
+            /*nameValidate()
+            *Validates the user input for the text field on the page labeled "Name"
+            *where the user will input their name.
+            */
             function nameValidate() {
-
                 var nameError = document.getElementById("nameError");
                 var name = document.lessonForm.name;
 
-
+                //Empty text field check
                 if (name.value === "") {
                     nameError.style.display = "inline";
                     return false;
-                }
-                else {
+                } else {
                     nameError.style.display = "none";
                     return true;
                 }
             }
-
+            /*phoneValidate()
+            *Validates the user input for the text field on the page labeled
+            *"Phone number" where the user will input their phone number.
+            */
             function phoneValidate() {
                 var phoneRegex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
                 var phoneNum = document.lessonForm.phoneNumber;
                 var phoneError = document.getElementById("phoneNumberError");
 
+                //Empty text field check
                 if (phoneNum.value === "") {
                     phoneError.style.display = "inline";
                     return false;
-
+                    //RegExp check
                 } else if (phoneNum.value.match(phoneRegex) == null) {
                     phoneError.style.display = "inline";
                     return false;
-                }
-                else {
+                } else {
                     phoneError.style.display = "none";
                     return true;
                 }
-
             }
+            /*CURRENTLY NOT IN USE, USING A CALENDAR ELEMENT IN THE FORM INSTEAD.
+            *dobValidate()
+            *Validates the user input for the text field on the page labeled
+            *"Date of birth (mm-dd-yyyy) where the user will enter their date
+            *of birth.
 
             function dobValidate() {
-                var dobRegex = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/;
-                var dob = document.lessonForm.dateOfBirth;
-                var dobError = document.getElementById("dateOfBirthError");
+            var dobRegex = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/;
+            var dob = document.lessonForm.dateOfBirth;
+            var dobError = document.getElementById("dateOfBirthError");
 
-                if (dob.value === "") {
-                    dobError.style.display = "inline";
-                    return false;
-                } else if (dob.value.match(dobRegex) == null) {
-                    dobError.style.display = "inline";
-                    return false;
-                } else {
-                    dobError.style.display = "none";
-                    return true;
-                }
+            //Empty text field check
+            if (dob.value === "") {
+            dobError.style.display = "inline";
+            return false;
+            //RegExp check
+            } else if (dob.value.match(dobRegex) == null) {
+            dobError.style.display = "inline";
+            return false;
+            } else {
+            dobError.style.display = "none";
+            return true;
             }
+            }*/
 
+            /*emailValidate()
+            *Validates the user input for the text field on the page labeled
+            *"E-mail" where the user will enter their email address
+            */
             function emailValidate() {
-
                 var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
                 var email = document.lessonForm.email;
-
                 var emailError = document.getElementById("emailError");
 
+                //Empty text field check
                 if (email.value === "") {
                     emailError.style.display = "inline";
                     return false;
+                    //RegExp check
                 } else if (email.value.match(emailRegex) == null) {
                     emailError.style.display = "inline";
                     return false;
@@ -236,83 +252,94 @@
                     return true;
                 }
             }
-
+            /*typeValidate()
+            *Validates the user input for the selection list on the page labeled
+            *"Lesson Type" where the user will select the type of lesson.
+            */
             function typeValidate() {
                 var type = document.lessonForm.lessonType;
                 var typeError = document.getElementById("LessonTypeError");
 
+                //Empty text field check
                 if (type.value == "") {
                     typeError.style.display = "inline";
                     return false;
-                }
-                else {
+                } else {
                     typeError.style.display = "none";
                     return true;
                 }
             }
-
+            /*skillValidate()
+            *Validates the user input for the selection list on the page
+            *labeled "Skill Level" where the user will select their level
+            *of skill
+            */
             function skillValidate() {
                 var skill = document.lessonForm.skillLevel;
                 var skillError = document.getElementById("SkillLevelError");
 
+                //Empty text field check
                 if (skill.value == "") {
                     skillError.style.display = "inline";
                     return false;
-                }
-                else {
+                } else {
                     skillError.style.display = "none";
                     return true;
                 }
             }
-
-            function ageValidate() {
-                var age = document.lessonForm.Age;
-                var ageError = document.getElementById("ageError");
-
-                if (age.value === "") {
-                    ageError.style.display = "inline";
-                    return false;
-                } else {
-                    ageError.style.display = "none";
-                    return true;
-                }
-            }
-
+            /*paymentValidate()
+            *Validates the user input for the selection list on the page
+            *labeled "Payment Type" where the user will select their
+            *method of payment
+            */
             function paymentValidate() {
                 var payment = document.lessonForm.paymentType;
                 var paymentError = document.getElementById("paymentTypeError");
 
+                //Empty text field check
                 if (payment.value == "") {
                     paymentError.style.display = "inline";
                     return false;
-                }
-                else {
+                } else {
                     paymentError.style.display = "none";
                     return true;
                 }
             }
-
+            /*submitValidate()
+            *checks all other validation functions to be true
+            */
             function submitValidate() {
                 if (nameValidate() && phoneValidate() && dobValidate() && emailValidate() && typeValidate() && skillValidate() && ageValidate() && paymentValidate()) {
                     return true;
-                }
-                else {
+                } else {
                     return false;
                 }
-            } 
-           
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
-   
+            }
+            /*formSubmit()
+             *checks if the function submitValidate() returns true
+             *if it does not, it alert the user that there may be errors.
+             */
+            function formSubmit() {
+                if (submitValidate == true) {
+                    document.getElementById("myForm").submit();
+                } else {
+                    alert("Errors exist on form. Please review your information.")
+                }
+                
+            }
+            /*formReset()
+            *Function for reset button to reset forms.
+            */
+            function formReset() {
+                document.getElementById("myForm").reset();
+            }
+            /*Not sure what this is for. It didn't seem to do anything, so I've
+            *commented it out for now
+            *
+            *  $(function() {
+            *  $( "#accordion" ).accordion();
+            *  });
+            */
           </script>
-
-  
- 
-  
-            
-            
-  
-
     </body>
 </html>
