@@ -138,7 +138,33 @@
             <p><a href="Sitemap.html">Site Map</a></p>
             </div>
         </div>
-        <script type="text/javascript">
+        
+         
+        <div id="accordion">
+        <div>
+        <h2> Beginner </h2>
+        <p> For people who have not skied or snowboarded before.</p>
+        </div>
+        
+        <div>
+        <h2> Novice </h2>
+        <p> For people who have skied or snowboarded a few times but still needs to know the basics.</p>
+        </div>
+        
+        <div>
+        <h2> Intermediate </h2>
+        <p> You can go up the mountains yourself but still need a few pointers here and there.</p>
+        </div>
+        
+        <div>
+        <h2> Advanced </h2>
+        <p> To develop more skills to be the very best.</p>
+        </div>
+        
+        
+        </div>
+        <script type="text/javascript" src="jquery.js">
+        
             function nameValidate() {
 
                 var nameError = document.getElementById("nameError");
@@ -274,7 +300,19 @@
                     return false;
                 }
             } 
-        </script>
+            
+          </script>
+
+  
+ 
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>
+            
+            
+  
 
     </body>
 </html>

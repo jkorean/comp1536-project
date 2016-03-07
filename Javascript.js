@@ -29,4 +29,3 @@ document.getElementById("Invalid").innerHTML = "Invalid Email.";
 	}
 }
 
-function
